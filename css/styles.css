@@ -1,60 +1,76 @@
-/* * {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-} */
-
-header {
-    background-color: black; /* Черный цвет фона для header */
-    padding: 10px 0; /* Внутренние отступы сверху и снизу */
-    width: 100%; /* Занимает всю ширину */
-    position: fixed; /* Фиксированное положение */
-    top: 0; /* Привязка к верхней части страницы */
-    z-index: 1000; /* Устанавливаем z-index для перекрытия других элементов */
 }
 
-
-nav {
-    width: 100%; /* Занимает всю ширину */
+@font-face {
+    font-family: Roboto;
+    src: url(/fonts/Roboto/Roboto-Bold.ttf);
+}
+.cardsViewport{
+    width: 840px;
+    height: 1190px;
+    background-color: antiquewhite;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
-.nav-list {
-    display: flex; /* Устанавливает flex-контейнер */
-    justify-content: space-between; /* Распределяет элементы по всей ширине с равными промежутками */
-    list-style-type: none; /* Убирает стандартные маркеры списка */
-    padding: 0; /* Убирает отступы */
-    margin: 0; /* Убирает отступы */
+.card{
+    box-sizing: content-box;
+    background-color: white;    
+    border: 1px black solid;
+    display: inline-block;
+    position: relative;
 }
 
-.nav-list li {
-    flex: 1; /* Элементы равной ширины */
-    text-align: center;/* Выравнивание текста по центру */
+.card img{
+    width: 250px;
+    height: 250px;
+    padding: 25px 4px;
+    box-sizing: content-box;
+    background-color: white;
 }
 
-.nav-list a {
-    color: white; /* Белый цвет текста */
-    text-decoration: none; /* Убирает подчеркивание */
-    /* display: block; Делаем ссылки блочными */
-    padding: 10px 0; /* Внутренние отступы */
+.describe p{
+    height: 16px;
+    display: block;
+}
+.card .price::before{
+    content: "$";
 }
 
-.nav-list a:hover {
-    background-color: #dbdbdbc6; /* Цвет фона при наведении */
-    color: black;
-    padding: 10px;
-    font-size: 115%;
-    transition: background-color 0.5s, color 0.5s, font-size 0.5s, padding 0.3s; /* Переход на 0.3 секунды для всех свойств */
+.price{
+    color: green;
+    font-weight: bold;
 }
 
-/* Медиа-запрос для мобильных устройств */
-@media (max-width: 600px) {
-    .nav-list {
-        flex-direction: row; /* Размещаем элементы в колонку */
-        justify-content: space-between;
-    }
+.price.discount::after{
+    content: " $229.00";
+    color: #A5A5A5;
+    font-weight: 200;
+    text-decoration: line-through;
+}
 
-    .nav-list li {
-        width: 100%; /*Занимает всю ширину */
-        margin: 5px 0; /* Отступы между элементами */
-    }
+.discount_item{
+    width: 80px;
+    height: 29px;
+    background-color: green;
+    text-align: center;
+    padding: auto;
+    align-content: center;    
+    position: absolute;
+    top: 10px;
+}
+
+.discount_item p{
+    color: white;
+    font-family: "Roboto";
+}
+
+.describe{
+    margin: 15px 0;
 }
