@@ -3,74 +3,102 @@
     padding: 0;
     box-sizing: border-box;
 }
+@font-face {
+    font-family: "Cera Pro Bold";
+    src: url(/fonts/cera-pro/CeraPro-Black.ttf);
+}
 
 @font-face {
-    font-family: Roboto;
-    src: url(/fonts/Roboto/Roboto-Bold.ttf);
+    font-family: "Cera Pro 400";
+    src: url(/fonts/cera-pro/CeraPro-Medium.ttf);
 }
-.cardsViewport{
-    width: 840px;
-    height: 1190px;
-    background-color: antiquewhite;
+
+@font-face {
+    font-family: "Cera Pro 500";
+    src: url(/fonts/cera-pro/CeraPro-Medium.ttf);
+}
+
+main{
     display: flex;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center;     /* Центрирование по вертикали */
+    height: 100vh; 
 }
+.whole_section{
 
-.card{
-    box-sizing: content-box;
-    background-color: white;    
-    border: 1px black solid;
-    display: inline-block;
-    position: relative;
+    height: calc(100% - 13.5%);
+    width: calc(100% - 23.2%);
+    /* margin: auto;
+    margin-top: auto;
+    margin-bottom: auto; */
+
 }
-
-.card img{
-    width: 250px;
-    height: 250px;
-    padding: 25px 4px;
-    box-sizing: content-box;
-    background-color: white;
-}
-
-.describe p{
-    height: 16px;
+.clearfix::after {
+    content: '';
     display: block;
-}
-.card .price::before{
-    content: "$";
+    clear: both;
 }
 
-.price{
-    color: green;
-    font-weight: bold;
+.first_block{
+    display: flex;
+    gap: 28px;
+    height: 34.04%;
 }
 
-.price.discount::after{
-    content: " $229.00";
-    color: #A5A5A5;
-    font-weight: 200;
-    text-decoration: line-through;
+.one_of_both{
+    display: flex;
+    background-color: #FBFBFB;
+    width: 48.8%;
+    align-items: center;
 }
 
-.discount_item{
-    width: 80px;
-    height: 29px;
-    background-color: green;
-    text-align: center;
-    padding: auto;
-    align-content: center;    
-    position: absolute;
-    top: 10px;
+
+.first_block_content{
+    padding: 14.8% 12% 18.4% 0;
+    text-align: end;
+
 }
 
-.discount_item p{
+.first_block_content div h2{
+    font-size: 18px;
+    color: #3D3D3D;
+    text-transform: uppercase;
+    padding-bottom: 9px;
+    font-family: "Cera Pro Bold";
+}
+
+.first_block_content div p{
+    color: #727272;
+    font-size: 14px;
+    padding-bottom: 25px;
+    font-family: "Cera Pro 400";
+}
+
+
+.button_find_more{
+    display: inline-block;
+    width: 140px;
+    height: 40px;
     color: white;
-    font-family: "Roboto";
+    background-color:#46A358;
+    ;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 14px;
+    text-decoration: none;
+    align-content: center;
+    font-family: "Cera Pro 500";
 }
 
-.describe{
-    margin: 15px 0;
+/*  */
+.blog_block{
+    text-align: center;
+}
+
+.cards_block{
+    display: flex;
+}
+
+.readMore_button::after{
+
 }
