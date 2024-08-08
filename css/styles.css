@@ -24,9 +24,7 @@
 main {
     display: flex;
     justify-content: center;
-    /* Центрирование по горизонтали */
     align-items: center;
-    /* Центрирование по вертикали */
     height: 100vh;
 }
 
@@ -112,7 +110,8 @@ main {
 
 .cards_block {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+
 }
 
 .card {
@@ -131,8 +130,8 @@ main {
     padding-top: 2.5%;
     display: flex;
     flex-direction: column;
-    min-height: max-content;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    background: #FBFBFB;
 }
 
 .card h3 {
@@ -156,6 +155,7 @@ main {
 .desc {
     font-family: "Cera Pro 500";
     font-size: 14px;
+    align-items: end;
 }
 
 .readMore_button {
@@ -163,7 +163,8 @@ main {
     color: #3D3D3D;
     font-family: "Cera Pro 500";
     font-size: 14px;
-
+    margin: auto 0;
+    
 }
 
 .readMore_button::after {
