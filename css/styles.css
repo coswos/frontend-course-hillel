@@ -1,24 +1,41 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: "Cera400";
+    src: url(/fonts/cera-pro/CeraPro-Regular.woff);
+}
+
+@font-face {
+    font-family: "Cera700";
+    src: url(/fonts/cera-pro/CeraPro-Bold.woff);
+}
+
+
+@font-face {
+    font-family: "Cera500";
+    src: url(/fonts/cera-pro/CeraPro-Medium.woff);
+}
 .body {
     width: 1050px;
     height: 676px;
 }
 
-.container{
+.container {
     width: 78.3%;
     margin: 0 auto;
 }
 
-.first_letter{
+.first_letter {
     text-transform: capitalize;
+    font-family: "Cera400";
+    color: #3D3D3D;
 }
 
-.bread_crumbs{
+.bread_crumbs {
     display: flex;
     padding-top: 25.3%;
 }
@@ -28,16 +45,114 @@
     padding-top: 3px;
 }
 
-.active{
+.active {
     color: #46A358;
     border-bottom: 2px solid #46A358;
     font-weight: 700;
 }
 
 .bread_crumbs .first_letter {
-    margin-right: 10px;
+    margin-right: 4.4%;
 }
 
 .bread_crumbs p:last-child {
-    margin-left: auto; 
+    margin-left: auto;
+    font-family: "Cera400";
+    color: #3D3D3D;
+
 }
+
+/*  */
+
+.cards{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 4.58%;
+}
+
+.card{
+    width: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    position: relative;
+}
+
+.card:hover{
+    border-top: 1px #46A358 solid ;
+}
+
+
+
+
+.card:hover {
+    border-top: 1px solid #46A358;
+}
+
+.card::after {
+    content: url(/img/icons/focus.png);
+    position: absolute;
+    display: none; /* Hide by default */
+    width: 100%;
+    padding-top: 98%;
+    margin: 0 25%;
+}
+
+.card:hover::after {
+    display: block; /* Show on hover */
+}
+
+    
+    
+
+
+
+
+
+.card img{
+    width: 100%;
+    padding: 25px 4px;
+    background-color: #FBFBFB;
+}
+
+.card p{
+    font-family: "Cera400";
+    font-size: 16px;
+    color: #3D3D3D;
+}
+
+.card p:last-child::before{
+    content: "$";
+    color: #46A358;
+}
+
+.card p:last-child{
+    color: #46A358;
+    font-family: "Cera700";
+    font-size: 18px;
+    display: inline-block;
+}
+
+.card p.sale{
+    width: 39%;
+    height: 11.24%;
+    background-color: #46A358;
+    font-size: 16px;
+    font-family: "Cera500";
+    text-transform: uppercase;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin-top: 5%;
+}
+
+.cut_price:after{
+    content: " $229.00";
+    text-decoration: line-through;
+    color: #A5A5A5;
+    font-size: 18px;
+    font-family: "Cera400";
+}   
