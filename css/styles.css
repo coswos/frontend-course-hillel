@@ -1,5 +1,182 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Cera400";
+}
+
+@font-face {
+    font-family: "Cera400";
+    src: url(/fonts/cera-pro/CeraPro-Regular.woff);
+}
+body {
+    width: 1440px;
+    height: 600px;
+}
+
+main {
+    width: 83.3%;
+    margin: auto auto;
+    height: 86.6%;
+}
+
+header {
+    text-transform: capitalize;
+    margin-top: 30px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8.83%;
+    border-bottom: 0.3px solid #46A358;
+}
+
+header nav{
+    width: 30%;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    white-space: nowrap;
+    justify-content: space-between;
+}
+
+header nav>ul>li>ul{
+    background-color: #EDF6EE;
+    /* display: flex;
+    flex-direction: column; */
+    display: block;
+    max-height: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+header nav>ul>li:hover >ul{
+    max-height: 190px;
+    width: 150px;
+    overflow: visible;
+    position: absolute;
+    font-size: 400;
+    font-weight: normal;
+
+}
+
+header nav ul li:hover{
+    border-bottom: 3px solid #46A358;
+    font-weight: 700;
+    color: #3D3D3D;
+  
+}
+
+header nav ul li ul li{
+    padding: 10px;
+}
+
+header nav ul li ul li:last-child::after{
+    content: ">";
+    width: 6px;
+    height: 10px;
+}
+
+
+
+
+
+header nav>ul>li:hover >ul>li:hover{
+    background-color: #1A712A;
+    color: white;
+    font-weight: 700;
+    align-content: center;
+}
+
+.logo {
+
+    display: flex;
+    align-items: center;
+}
+
+.login_button {
+    text-decoration: none;
+    width: 8.33%;
+    height: 66%;
+    background-color: #46A358;
+    color: white;
+    font-family: "Cera400";
+    font-weight: 500;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5% 0;
+    border-radius: 6px;
+    position: relative;
+}
+
+.second_block{
+    width: 1200px;
+    height: 450px;
+    padding-top: 12px;
+    display: flex;
+    background-color: #F5F5F580;
+}
+
+.left_col p:first-child{
+    font-family: "Cera400";
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #3D3D3D;
+}
+
+.left_col h1{
+    font-weight: 900;
+    font-size: 70px;
+    text-transform: uppercase;
+}
+
+.left_col>h1>span{
+    font-weight: 900;
+    font-size: 70px;
+    text-transform: uppercase;
+    color: green;
+}
+
+.desc{
+    color: #727272;
+    font-size: 14px;
+}
+
+.left_col a{
+    width: 140px;
+    height: 40px;
+    background-color: #46A358;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    align-content: center;
+    margin-top: 44px;
+}
+
+.left_col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 40px;
+}
+
+.right_col img:first-child{
+    position: relative;
+}
+
+.right_col img:last-child{
+    position: absolute;
+    bottom: 39.5%;
+    right: 31%;
 }
