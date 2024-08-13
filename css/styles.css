@@ -9,6 +9,7 @@
     font-family: "Cera400";
     src: url(/fonts/cera-pro/CeraPro-Regular.woff);
 }
+
 body {
     width: 1440px;
     height: 600px;
@@ -16,8 +17,8 @@ body {
 
 main {
     width: 83.3%;
-    margin: auto auto;
     height: 86.6%;
+    margin: auto auto;
 }
 
 header {
@@ -26,95 +27,123 @@ header {
     margin-bottom: 12px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
     height: 8.83%;
     border-bottom: 0.3px solid #46A358;
 }
 
-header nav{
+header nav {
     width: 30%;
 }
 
-header nav ul {
+
+
+.main_list {
     display: flex;
     list-style: none;
-    white-space: nowrap;
     justify-content: space-between;
-}
-
-header nav>ul>li>ul{
-    background-color: #EDF6EE;
-    /* display: flex;
-    flex-direction: column; */
-    display: block;
-    max-height: 0;
-    padding: 0;
-    overflow: hidden;
-    position: relative;
-}
-
-header nav>ul>li:hover >ul{
-    max-height: 190px;
-    width: 150px;
-    overflow: visible;
-    position: absolute;
-    font-size: 400;
-    font-weight: normal;
-
-}
-
-header nav ul li:hover{
-    border-bottom: 3px solid #46A358;
-    font-weight: 700;
-    color: #3D3D3D;
-  
-}
-
-header nav ul li ul li{
-    padding: 10px;
-}
-
-header nav ul li ul li:last-child::after{
-    content: ">";
-    width: 6px;
-    height: 10px;
-}
-
-
-
-
-
-header nav>ul>li:hover >ul>li:hover{
-    background-color: #1A712A;
-    color: white;
-    font-weight: 700;
-    align-content: center;
-}
-
-.logo {
-
-    display: flex;
     align-items: center;
 }
 
 .login_button {
     text-decoration: none;
-    width: 8.33%;
-    height: 66%;
     background-color: #46A358;
     color: white;
     font-family: "Cera400";
     font-weight: 500;
     font-size: 15px;
     display: flex;
-    align-items: center;
     justify-content: center;
     padding: 0.5% 0;
     border-radius: 6px;
     position: relative;
+    width: 27%;
+    height: 83%;
 }
 
-.second_block{
+.button_block{
+    width: 30%;
+    display: flex;
+    justify-content: end;
+}
+
+
+.main_list>li{
+    border-bottom: 3px solid transparent;
+    padding-bottom: 23px ;
+    position: relative;
+}
+
+.main_list>li:hover{
+    border-bottom: 3px solid #46A358;
+    font-weight: 700;
+    color: #3D3D3D;
+
+}
+
+.main_list>li:hover > .second_list {
+    position: absolute;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 15px; */
+    display: inline-block;
+    padding: 10px;
+
+}
+
+.second_list:hover{
+    background-color: green;
+}
+
+.main_list li .second_list {
+    display: none;
+    background-color: #EDF6EE;
+    list-style: none;
+
+}
+
+.wrapper{
+    /* height: 190px;
+    width: 145px; */
+    display: flex;
+    flex-direction: column;
+}
+
+.second_list li:hover{
+    /* padding: 15px; */
+    background-color: green;
+}
+
+.second_list li:hover > .last_list{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+.second_list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.logo {
+
+    display: flex;
+    color: #46A358;
+    height: 64%;
+    width: 37%;
+    align-items: center;
+    gap: 7%;
+
+}
+
+
+
+.second_block {
     width: 1200px;
     height: 450px;
     padding-top: 12px;
@@ -122,7 +151,7 @@ header nav>ul>li:hover >ul>li:hover{
     background-color: #F5F5F580;
 }
 
-.left_col p:first-child{
+.left_col p:first-child {
     font-family: "Cera400";
     font-weight: 500;
     font-size: 14px;
@@ -130,25 +159,25 @@ header nav>ul>li:hover >ul>li:hover{
     color: #3D3D3D;
 }
 
-.left_col h1{
+.left_col h1 {
     font-weight: 900;
     font-size: 70px;
     text-transform: uppercase;
 }
 
-.left_col>h1>span{
+.left_col>h1>span {
     font-weight: 900;
     font-size: 70px;
     text-transform: uppercase;
     color: green;
 }
 
-.desc{
+.desc {
     color: #727272;
     font-size: 14px;
 }
 
-.left_col a{
+.left_col a {
     width: 140px;
     height: 40px;
     background-color: #46A358;
@@ -164,19 +193,41 @@ header nav>ul>li:hover >ul>li:hover{
     margin-top: 44px;
 }
 
-.left_col{
+.left_col {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-left: 40px;
 }
 
-.right_col img:first-child{
+.right_col img:first-child {
     position: relative;
 }
 
-.right_col img:last-child{
+.right_col img:last-child {
     position: absolute;
-    bottom: 39.5%;
+    bottom: 27.5%;
     right: 31%;
 }
+
+
+.second_list {
+    display: none;
+    flex-direction: column;
+
+}
+
+.last_list {
+    display: none;
+}
+
+
+
+/* div.menu-bar ul ul {
+    display: none;
+  }
+  
+  div.menu-bar li:hover > ul {
+    display: block;
+  }
+   */
