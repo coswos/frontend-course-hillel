@@ -25,30 +25,52 @@ body {
     width: 1200px;
     height: 610px;
     margin: 90px auto;
+    background-color: #FBFBFB;
+
+}
+
+.padding{
+    padding-top: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
 .cards_section {
     width: 100%;
     height: 42.8%;
-    background-color: #FBFBFB;
     display: flex;
+    justify-content: space-between;
 }
 
 .card {
     height: 80.8%;
-    width: 17%;
+    width: 19%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: start;
-    margin: auto auto;
+    justify-content: space-between;
     
+}
+
+.bord{
+    padding: 0 1.5%;
+    border-left: 1px #46A3581A solid;
+    border-right: 1px #46A3581A solid;
 }
 
 .card img {
     height: 44%;
 }
+ .card h3{
+    font-size: 1.285rem;
+    font-weight: 700;
+    font-family: "Cera700";
+    color: #3D3D3D;
+ }
 
+ .card p{
+    color: #727272;
+ }
 
 .subscribe {
     height: 80.8%;
@@ -57,22 +79,92 @@ body {
 
 .subscribe form {
     width: 100%;
+    height: 24%;
     display: flex;
 }
+
+.subscribe form input{
+    display: flex;
+    flex-grow: 1;
+    border: none;
+    color: #ACACAC;
+    background-color: white;
+    padding-left: 15px;
+}
+.subscribe form button{
+    background-color: #46A358;
+    width: 24%;
+    border-radius: 0 6px 6px 0;
+    border: none;
+    color: white;
+    font-size: 1.285rem;
+    font-weight: 700;
+}
+
+.subscribe h3{
+    padding-top: 3%;
+    font-size: 1.285rem;
+    font-weight: 700;
+    font-family: "Cera700";
+    color: #3D3D3D;
+}
+
+
 
 .bg_section {
     height: 14.4%;
     width: 100%;
-    background-color: lightgreen;
+    padding: 0 2%;
+    
+    background: linear-gradient(to right, #EDF6EF, #52C368);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-footer {
-    height: 42.8%;
-    width: 100%;
-    background-color: #FBFBFB;
+.center_block{
+    display: flex;
 }
+
+.center_block>img{
+    padding-right: 5px;
+}
+
+.center_block>p{
+    color: #3D3D3D;
+}
+ 
 
 .copyright {
+    padding-top: 10px;
+    text-align: center;
+}
+.down_card{
+    height: 100%;
+    width: 15%;
+}
+
+.down_card p{
+    padding-top: 20px;
+    color: #3D3D3D;
+}
+
+.down_heading{
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.images{
+    width: 190px;
+    height: 30px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+}
+
+.last_downcard{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 9%;
+    padding-bottom: 5%;
 }
