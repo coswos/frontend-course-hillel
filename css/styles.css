@@ -10,6 +10,11 @@
     src: url(/fonts/cera-pro/CeraPro-Regular.woff);
 }
 
+@font-face {
+    font-family: "Cera700";
+    src: url(/fonts/cera-pro/CeraPro-Bold.woff);
+}
+
 body {
     width: 1440px;
     height: 600px;
